@@ -39,39 +39,54 @@
 
 
 
-import './App.css';
-import {app} from './firebase';
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
-const auth = getAuth() 
+// import './App.css';
+// import {app} from './firebase';
+// import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+// const auth = getAuth() 
 
 
-import React from 'react'
+// import React from 'react'
 
-function App() {
+// function App() {
 
-function Signup() {
+// function Signup() {
   
-  createUserWithEmailAndPassword(auth,'RaRaftar@gmail.com', 'yoyobro')
-    .then((userCredential) => {
-console.log(userCredential);
+//   createUserWithEmailAndPassword(auth,'RaRaftar@gmail.com', 'yoyobro')
+//     .then((userCredential) => {
+// console.log(userCredential);
       
-    })
-    .catch((error) => {
-      console.log(error);
-      });  }
+//     })
+//     .catch((error) => {
+//       console.log(error);
+//       });  }
   
  
 
 
 
 
-  return (
-    <div>
+//   return (
+//     <div>
 
-      <button onClick={Signup}>CreateEmail</button>
+//       <button onClick={Signup}>CreateEmail</button>
       
-    </div>
-  )
-}
+//     </div>
+//   )
+// }
 
-export default App
+// export default App
+
+
+import Login from './Login';
+import './App.css';
+
+import Signup from './Signup';
+
+import React from 'react'
+export default function App(){
+  return <div>
+    <h1>  CHecking if the Authentication works well</h1>
+    <Signup />
+    <Login />
+  </div>
+}
